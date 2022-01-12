@@ -1,0 +1,9 @@
+prefix=${pcfiledir}/../..
+libdir=${prefix}/lib
+includedir=${prefix}/../include
+
+Name: dlib
+Description: Numerical and networking C++ library
+Version: 19.22.0
+Libs: -L"${libdir}" -ldlib ws2_32 winmm comctl32 gdi32 imm32 optimized ${prefix}/lib/libpng16.lib debug ${prefix}/lib/libpng16d.lib optimized ${prefix}/lib/zlib.lib debug ${prefix}/lib/zlibd.lib optimized ${prefix}/lib/jpeg.lib debug ${prefix}/lib/jpeg.lib ${prefix}/lib/openblas.lib ${prefix}/lib/lapack.lib ${prefix}/lib/openblas.lib unofficial::sqlite3::sqlite3 FFTW3::fftw3
+Cflags: -I"${includedir}" 
