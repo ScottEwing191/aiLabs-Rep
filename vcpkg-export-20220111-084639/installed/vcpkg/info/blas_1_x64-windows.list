@@ -1,0 +1,4 @@
+x64-windows/
+x64-windows/share/
+x64-windows/share/blas/
+x64-windows/share/blas/vcpkg_abi_info.txt
