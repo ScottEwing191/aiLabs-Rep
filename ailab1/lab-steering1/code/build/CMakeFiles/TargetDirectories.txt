@@ -1,0 +1,5 @@
+D:/UniCourse/AI_Programming/aiLabs-Rep/ailab1/lab-steering1/code/build/CMakeFiles/steering0.dir
+D:/UniCourse/AI_Programming/aiLabs-Rep/ailab1/lab-steering1/code/build/CMakeFiles/steering1.dir
+D:/UniCourse/AI_Programming/aiLabs-Rep/ailab1/lab-steering1/code/build/CMakeFiles/steering2.dir
+D:/UniCourse/AI_Programming/aiLabs-Rep/ailab1/lab-steering1/code/build/CMakeFiles/ALL_BUILD.dir
+D:/UniCourse/AI_Programming/aiLabs-Rep/ailab1/lab-steering1/code/build/CMakeFiles/ZERO_CHECK.dir

@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
       my_shapes.back().posn_ = GetMousePosition();
     }
+      DrawText(TextFormat("%i", my_shapes.size()), 9, 9, 18, RED);
 
     for (auto s : my_shapes) {
       if (s.shape_ == shape::shape_type::circle)

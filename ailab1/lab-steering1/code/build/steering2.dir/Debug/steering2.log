@@ -1,0 +1,9 @@
+﻿  steering2.cpp
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-extras\draw-triangle-pro.hpp(63,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-extras\draw-triangle-pro.hpp(63,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-cpp-4.0.0\include\./Functions.hpp(66,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-cpp-4.0.0\include\./Functions.hpp(147,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-cpp-4.0.0\include\./Functions.hpp(166,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\lab-steering1\code\steering2.cpp(56,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\lab-steering1\code\steering2.cpp(56,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  steering2.vcxproj -> D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\lab-steering1\code\build\Debug\steering2.exe

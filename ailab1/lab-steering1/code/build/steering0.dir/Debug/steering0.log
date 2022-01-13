@@ -1,0 +1,10 @@
+﻿  Building Custom Rule D:/UniCourse/AI_Programming/aiLabs-Rep/ailab1/lab-steering1/code/CMakeLists.txt
+  steering0.cpp
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-cpp-4.0.0\include\./Functions.hpp(66,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-cpp-4.0.0\include\./Functions.hpp(147,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-cpp-4.0.0\include\./Functions.hpp(166,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\lab-steering1\code\steering0.cpp(16,38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\lab-steering1\code\steering0.cpp(16,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\lab-steering1\code\steering0.cpp(28,11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\lab-steering1\code\steering0.cpp(29,11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  steering0.vcxproj -> D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\lab-steering1\code\build\Debug\steering0.exe

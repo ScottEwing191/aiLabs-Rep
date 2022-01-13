@@ -1,0 +1,5 @@
+﻿  steering1.cpp
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-cpp-4.0.0\include\./Functions.hpp(66,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-cpp-4.0.0\include\./Functions.hpp(147,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\raylib-cpp-4.0.0\include\./Functions.hpp(166,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+  steering1.vcxproj -> D:\UniCourse\AI_Programming\aiLabs-Rep\ailab1\lab-steering1\code\build\Debug\steering1.exe
