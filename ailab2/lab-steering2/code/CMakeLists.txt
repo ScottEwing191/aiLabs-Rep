@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 3.0)
 
-if (DEFINED ENV{VCPKG_ROOT})
-  set(VCPKG_CMAKE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
-  list(APPEND CMAKE_TOOLCHAIN_FILE ${VCPKG_CMAKE})
-endif ()
+#if (DEFINED ENV{VCPKG_ROOT})
+#  set(VCPKG_CMAKE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
+#  list(APPEND CMAKE_TOOLCHAIN_FILE ${VCPKG_CMAKE})
+#endif ()
+
+set(CMAKE_TOOLCHAIN_FILE "C://Users//B00371006//Desktop//aiLabs-Rep//vcpkg-export-20220111-084639//scripts//buildsystems//vcpkg.cmake")
 
 set(RLCPP "${CMAKE_CURRENT_SOURCE_DIR}/../../raylib-cpp-4.0.0")
 set(RLEXTRAS "${CMAKE_CURRENT_SOURCE_DIR}/../../raylib-extras")

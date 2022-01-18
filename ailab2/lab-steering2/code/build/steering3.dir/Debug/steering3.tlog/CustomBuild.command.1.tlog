@@ -1,6 +1,6 @@
-^D:\UNICOURSE\AI_PROGRAMMING\AILABS-REP\AILAB2\LAB-STEERING2\CODE\CMAKELISTS.TXT
+^C:\USERS\B00371006\DESKTOP\AILABS-REP\AILAB2\LAB-STEERING2\CODE\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/UniCourse/AI_Programming/aiLabs-Rep/ailab2/lab-steering2/code -BD:/UniCourse/AI_Programming/aiLabs-Rep/ailab2/lab-steering2/code/build --check-stamp-file D:/UniCourse/AI_Programming/aiLabs-Rep/ailab2/lab-steering2/code/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/B00371006/Desktop/aiLabs-Rep/ailab2/lab-steering2/code -BC:/Users/B00371006/Desktop/aiLabs-Rep/ailab2/lab-steering2/code/build --check-stamp-file C:/Users/B00371006/Desktop/aiLabs-Rep/ailab2/lab-steering2/code/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

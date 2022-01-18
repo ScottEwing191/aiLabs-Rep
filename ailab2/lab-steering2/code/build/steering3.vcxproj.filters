@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\UniCourse\AI_Programming\aiLabs-Rep\ailab2\lab-steering2\code\steering3.cpp">
+    <ClCompile Include="C:\Users\B00371006\Desktop\aiLabs-Rep\ailab2\lab-steering2\code\steering3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\UniCourse\AI_Programming\aiLabs-Rep\ailab2\lab-steering2\code\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\B00371006\Desktop\aiLabs-Rep\ailab2\lab-steering2\code\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{66CA7877-293A-3BED-B95D-785CE8A001D9}</UniqueIdentifier>
+      <UniqueIdentifier>{097F3CA7-67EB-3D9E-ABDB-0AD81E28BBC7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
