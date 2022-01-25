@@ -269,8 +269,8 @@ int main(int argc, char* argv[])
 
 		EndDrawing();
 
-		//ship->Update(arriveEnemy.GetSteering(), 200.0f, GetFrameTime());
-		ship->Update(alignEnemy.GetSteering(), 00.0f, GetFrameTime());
+		ship->Update(arriveEnemy.GetSteering(), 200.0f, GetFrameTime());
+		//ship->Update(alignEnemy.GetSteering(), 00.0f, GetFrameTime());
 
 		
 		//enemy->Update(arriveShip.GetSteering(), 100.0f, GetFrameTime());

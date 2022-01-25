@@ -1,0 +1,10 @@
+^D:\UNICOURSE\AI_PROGRAMMING\AILABS-REP\AILAB3\LAB-STEERING3\CODE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code -BD:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build --check-stamp-file D:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
