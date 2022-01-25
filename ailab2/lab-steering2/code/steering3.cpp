@@ -1,3 +1,4 @@
+#include <iostream>
 #include "vec.hpp"
 #include "draw-triangle-pro.hpp"
 #include "raylib-cpp.hpp"
@@ -22,7 +23,7 @@ class Kinematic
 {
 public:
 	Vector position;
-	float orientation;
+	float orientation{};
 	Vector velocity{ 0,0,0 };
 	float rotation = 0;
 
@@ -80,12 +81,7 @@ class Ship : public Kinematic {
 public:
 	ai::Vector2 l, r, nose;
 	ai::Vector2 pos;
-	//float rotation;
 	raylib::Color col = RED;
-
-	/*Ship() {
-
-	}*/
 
 	Ship(Vector position, ai::Vector2 l, ai::Vector2 r, ai::Vector2 nose, float rotation, raylib::Color col) {
 		this->position = position;
@@ -99,56 +95,42 @@ public:
 	void Draw() {
 		pos.x = position.x;
 		pos.y = position.z;
-		ai::DrawTrianglePro(pos, l, r, nose, rotation, col);		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!should rotation be orientation
-
+		ai::DrawTrianglePro(pos, l, r, nose, orientation, col);
 	}
 };
 
 class Arrive {
 public:
-	Kinematic* character;
-	Kinematic* target;
+	Kinematic& character_;
+	Kinematic& target_;
 
-	float maxAcceleration;
-	float maxSpeed;
+	float maxAcceleration_;
+	float maxSpeed_;
 
-
-	float targetRadius;				// the radius for arriving at the target
-	float slowRadius;				// the radius for beginning to slow down
-	float timeToTarget = 0.1f;		// the time over which to achieve target speed
-
-	Arrive(Kinematic* character, Kinematic* target, float maxAcceleration, float maxSpeed, float targetRadius, float slowRadius) {
-		this->character = character;
-		this->target = target;
-		this->maxAcceleration = maxAcceleration;
-		this->maxSpeed = maxSpeed;
-		this->targetRadius = targetRadius;
-		this->slowRadius = slowRadius;
-	}
+	float targetRadius_;				// the radius for arriving at the target
+	float slowRadius_;				// the radius for beginning to slow down
+	float timeToTarget_ = 0.1f;		// the time over which to achieve target speed
 
 	SteeringOutput GetSteering() {
 		SteeringOutput result{};
 
 		//--Get the direction to the target
-		Vector direction = target->position - character->position;
+		Vector direction = target_.position - character_.position;
 		float distance = direction.length();
 
 		//--Check if we are there, return no steering
-		if (distance <= targetRadius) {
-			//result.linear = { 0,0,0 };
-			//result.linear = { -character->velocity.x, 0, -character->velocity.z };		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-			//result.angular = 0;
+		if (distance <= targetRadius_) {
+			result.linear = { -character_.velocity.x, 0, -character_.velocity.z };
 			return result;
-			//return __null;				// this is probably wrong
 		}
 
 		//--If we are outside the slow radius then move at max speed
 		float targetSpeed{};			// using name from pseudocode p.99 ln.30, doesn't really make sende to me (characterSpeed better name?)
-		if (distance > slowRadius)
-			targetSpeed = maxSpeed;
+		if (distance > slowRadius_)
+			targetSpeed = maxSpeed_;
 		//--Otherwise calculate scaled speed
 		else
-			targetSpeed = maxSpeed * distance / slowRadius;
+			targetSpeed = maxSpeed_ * distance / slowRadius_;
 
 		//--The target velocity combines speed and direction
 		Vector targetVelocity = direction;
@@ -156,14 +138,14 @@ public:
 		targetVelocity *= targetSpeed;
 
 		//--Acceleration tries to get to the speed and velocity
-		result.linear = targetVelocity - character->velocity;
-		result.linear /= timeToTarget;
+		result.linear = targetVelocity - character_.velocity;
+		result.linear /= timeToTarget_;
 
 		//--Check if acceleration is too fast
-		if (result.linear.length() > maxAcceleration)
+		if (result.linear.length() > maxAcceleration_)
 		{
 			result.linear.normalise();
-			result.linear *= maxAcceleration;
+			result.linear *= maxAcceleration_;
 		}
 		result.angular = 0;
 		return result;
@@ -178,29 +160,64 @@ public:
 	float maxAngularAcceleration_ = 1.0f;
 	float maxRotation_ = 3.0f;
 
-	float targetRadius;				// the radius for arriving at the target
-	float slowRadius;				// the radius for beginning to slow down
-	float timeToTarget = 0.1f;		// the time over which to achieve target speed
+	float targetRadius_;				// the radius for arriving at the target
+	float slowRadius_;				// the radius for beginning to slow down
+	float timeToTarget_ = 0.1f;		// the time over which to achieve target speed
 
 	SteeringOutput GetSteering() {
-		SteeringOutput result;
+		SteeringOutput result{};
 
 		//--Get the direction to the target
 		float rotation = target_.orientation - character_.orientation;
 
-		//Map the resut to the (-pi,pi) interval
+		//--Map the result to the (-360,360) interval
 		rotation = MapToRange(rotation);
 		float rotationSize = abs(rotation);
 
+		//--Check if we are there, return no steering
+		if (rotationSize < targetRadius_) {
+			result.angular -= result.angular;
+			return result;
+		}
+
+		//--If we are outside the slow radius, then use max rotation
+		float targetRotation_{1};
+		if (rotation >= slowRadius_) {
+			rotation = maxRotation_;
+			std::cout << "Outside Slow Radius" << std::endl;
+		}
+		//--Otherwise calculate scaled rotation
+		else {
+			targetRotation_ = maxRotation_ * rotationSize / slowRadius_;
+			std::cout << "Inside Slow Radius" << std::endl;
+
+		}
+
+		//--The final target rotation combines speed(already in the variable) and direction
+		targetRotation_ *= rotation / rotationSize;
+
+		//--Acceleration tries to get to the target rotation
+		result.angular = targetRotation_ - character_.rotation;
+		result.angular /= timeToTarget_;
+
+		//--Check if acceleration is too great
+		float angularAcceleration = abs(result.angular);
+		if (angularAcceleration > maxAngularAcceleration_)
+		{
+			result.angular /= angularAcceleration;		// maes it 1
+			result.angular *= maxAngularAcceleration_;
+		}
+		result.linear = 0;
 		return result;
 	}
 
-	float MapToRange(float rotation) {						//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		float modRotation   = fmod(rotation, 360);
-		float rotationRad = rotation * DEG2RAD;
+	float MapToRange(float rotation) {
+		float modRotation = fmod(rotation, 360);
+		return modRotation;
+		//return rotation * DEG2RAD;
 	}
 
-	
+
 };
 
 int main(int argc, char* argv[])
@@ -211,18 +228,26 @@ int main(int argc, char* argv[])
 	SetTargetFPS(60);
 
 	//--Declare Ships
+	//--also works and doesnt require contructor
+	//Ship ship{ Vector{ sw / 2,0,sh / 2 }, ai::Vector2{ 0,-10 }, ai::Vector2{ 0,10 }, ai::Vector2{ 30,0 }, 0, BLUE };		
+
 	Ship* ship = new Ship({ sw / 2,0,sh / 2 }, { 0,-10 }, { 0,10 }, { 30,0 }, 0, BLUE);
-	//Ship ship2({ sw / 2,0,sh / 2 }, { 0,-10 }, { 0,10 }, { 30,0 }, 0, BLUE);
 	Ship* enemy = new Ship({ sw / 2,0,sh / 2 - 200 }, { 0,-10 }, { 0,10 }, { 30,0 }, 0, RED);
 
 
 	//--Declare Seek
+	//Seek seekEnemy{ *ship, *enemy, 1.0f };			//not tested but should be fine and means constructor not required
 	Seek* seekEnemy = new Seek(*ship, *enemy, 1.0f);
 	Seek* seekShip = new Seek(*enemy, *ship, 1.0f);
 
 	//--Declare Arrive
-	Arrive arriveEnemy = *(new Arrive(ship, enemy, 140, 200, 10, 200));
-	Arrive arriveShip = *(new Arrive(enemy, ship, 70, 100, 10, 100));
+	//Arrive arriveEnemy = *(new Arrive(ship, enemy, 140, 200, 10, 200));		// requires contructor
+	//Arrive arriveShip = *(new Arrive(enemy, ship, 70, 100, 10, 100));
+	Arrive arriveEnemy{ *ship, *enemy, 140, 200, 10, 200 };						// doesnt require constructor
+	Arrive arriveShip{ *enemy, *ship, 70, 100, 10, 100 };
+
+	//				maxAngularAcceleration, maxRotation, targetRadius, slowRadius
+	Align alignEnemy{ *ship, *enemy, 40.0f, 80.0f, 20.0f, 90.0f };
 
 	while (!window.ShouldClose()) // Detect window close button or ESC key
 	{
@@ -235,6 +260,7 @@ int main(int argc, char* argv[])
 			const auto mpos = GetMousePosition();
 			Vector mposV3{ mpos.x, 0, mpos.y };
 			enemy->position = mposV3;
+			enemy->orientation = rand() % 360;
 		}
 
 		enemy->Draw();
@@ -244,9 +270,12 @@ int main(int argc, char* argv[])
 		EndDrawing();
 
 		ship->Update(arriveEnemy.GetSteering(), 200.0f, GetFrameTime());
-		//enemy->Update(arriveShip.GetSteering(), 100.0f, GetFrameTime());
+		//ship->Update(alignEnemy.GetSteering(), 00.0f, GetFrameTime());
 
 		
+		//enemy->Update(arriveShip.GetSteering(), 100.0f, GetFrameTime());
+
+
 	}
 
 	return 0;
