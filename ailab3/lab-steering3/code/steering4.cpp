@@ -69,6 +69,7 @@ public:
   }
 };
 
+
 class Ship
 {
 public:
@@ -118,6 +119,96 @@ public:
   }
 };
 
+class Align {
+public:
+	Kinematic& character_;
+	Kinematic& target_;
+
+	float maxAngularAcceleration_ = 1.0f;
+	float maxRotation_ = 3.0f;
+
+	float targetRadius_;				// the radius for arriving at the target
+	float slowRadius_;				// the radius for beginning to slow down
+	float timeToTarget_ = 0.1f;		// the time over which to achieve target speed
+
+	SteeringOutput GetSteering() {
+		SteeringOutput result{ {0,0,0},0 };
+
+		//--Get the direction to the target
+		float rotation = target_.orientation_ - character_.orientation_;
+
+		//--Map the result to the (-360,360) interval
+		//rotation = MapToRange(rotation);
+		rotation = std::abs(rotation) > PI ? rotation - 2 * PI : rotation;
+		float rotationSize = abs(rotation);
+
+		//--Check if we are there, return no steering
+		if (rotationSize < targetRadius_) {
+			//result.angular = -result.angular;
+			return result;
+		}
+
+		//--If we are outside the slow radius, then use max rotation
+		float targetRotation{ 0 };
+		if (rotation >= slowRadius_) {
+			targetRotation = maxRotation_;
+		}
+		//--Otherwise calculate scaled rotation
+		else {
+			targetRotation = maxRotation_ * rotationSize / slowRadius_;
+		}
+
+		//--The final target rotation combines speed(already in the variable) and direction
+		targetRotation *= rotation / rotationSize;
+
+		//--Acceleration tries to get to the target rotation
+		result.angular_ = targetRotation - character_.rotation_;
+		result.angular_ /= timeToTarget_;
+
+		//--Check if acceleration is too great
+		float angularAcceleration = abs(result.angular_);
+
+		if (angularAcceleration > maxAngularAcceleration_)
+		{
+			result.angular_ /= angularAcceleration;		// makes it 1
+			result.angular_ *= maxAngularAcceleration_;
+		}
+		result.linear_ = 0;
+		return result;
+	}
+
+	float MapToRange(float rotation) {
+		float modRotation = fmod(rotation, 360);
+		return modRotation;
+		//return rotation * DEG2RAD;
+	}
+
+
+};
+
+class Face : public Align {
+public:
+	Kinematic& target;
+
+	SteeringOutput getSteering(){
+		//--Calculate the target to delegate to align
+		//--Work out the direction to target
+		Vector direction = target.position_ - character_.position_;
+
+		//--Check for zero direection, and make no change if so.
+		if (direction.length() == 0)
+		{
+			//return target;
+		}
+	}
+};
+
+//--Wander
+class Wander {
+public:
+
+};
+
 int main(int argc, char *argv[])
 {
   int w{1024}, h{768};
@@ -136,6 +227,11 @@ int main(int argc, char *argv[])
   const float drag_factor{0.5};
 
   Seek seek{hunter.k_, prey.k_, 1000};
+
+  //--Sounds Test
+  raylib::AudioDevice audioDevice;
+  raylib::Sound sound("../resources/weird.wav");        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
   while (!window.ShouldClose()) // Detect window close button or ESC key
   {

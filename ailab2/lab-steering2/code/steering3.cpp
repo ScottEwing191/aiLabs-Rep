@@ -15,17 +15,17 @@ using Vector = ai::Vector3;
 class SteeringOutput
 {
 public:
-	Vector linear;
-	float angular;
+	Vector linear_;
+	float angular_;
 };
 
 class Kinematic
 {
 public:
-	Vector position;
-	float orientation{};
-	Vector velocity{ 0,0,0 };
-	float rotation = 0;
+	Vector position_;
+	float orientation_{};
+	Vector velocity_{ 0,0,0 };
+	float rotation_ = 0;
 
 	/*Kinematic() {
 
@@ -33,18 +33,18 @@ public:
 
 	void Update(const SteeringOutput steering, float maxSpeed, float time) {
 		//--Update the position and orientation
-		position += velocity * time;
-		orientation += rotation * time;
+		position_ += velocity_ * time;
+		orientation_ += rotation_ * time;
 
 		//--and the velocity and rotation
-		velocity += steering.linear * time;
-		rotation += steering.angular * time;
+		velocity_ += steering.linear_ * time;
+		rotation_ += steering.angular_ * time;
 
 		//--Check for speeding and clip
-		if (velocity.length() > maxSpeed)
+		if (velocity_.length() > maxSpeed)
 		{
-			velocity.normalise();
-			velocity *= maxSpeed;
+			velocity_.normalise();
+			velocity_ *= maxSpeed;
 		}
 	}
 };
@@ -66,13 +66,13 @@ public:
 		SteeringOutput result;
 
 		//--Get the direction to the target
-		result.linear = target_.position - character_.position;
+		result.linear_ = target_.position_ - character_.position_;
 
 		//--Give the full acceleration along this direction
-		result.linear.normalise();
-		result.linear *= maxAcceleration_;
+		result.linear_.normalise();
+		result.linear_ *= maxAcceleration_;
 
-		result.angular = 0;
+		result.angular_ = 0;
 		return result;
 	}
 };
@@ -84,18 +84,18 @@ public:
 	raylib::Color col = RED;
 
 	Ship(Vector position, ai::Vector2 l, ai::Vector2 r, ai::Vector2 nose, float rotation, raylib::Color col) {
-		this->position = position;
+		this->position_ = position;
 		this->l = l;
 		this->r = r;
 		this->nose = nose;
-		this->rotation = rotation;
+		this->rotation_ = rotation;
 		this->col = col;
 	}
 
 	void Draw() {
-		pos.x = position.x;
-		pos.y = position.z;
-		ai::DrawTrianglePro(pos, l, r, nose, orientation, col);
+		pos.x = position_.x;
+		pos.y = position_.z;
+		ai::DrawTrianglePro(pos, l, r, nose, orientation_, col);
 	}
 };
 
@@ -115,12 +115,12 @@ public:
 		SteeringOutput result{};
 
 		//--Get the direction to the target
-		Vector direction = target_.position - character_.position;
+		Vector direction = target_.position_ - character_.position_;
 		float distance = direction.length();
 
 		//--Check if we are there, return no steering
 		if (distance <= targetRadius_) {
-			result.linear = { -character_.velocity.x, 0, -character_.velocity.z };
+			result.linear_ = { -character_.velocity_.x, 0, -character_.velocity_.z };
 			return result;
 		}
 
@@ -138,16 +138,16 @@ public:
 		targetVelocity *= targetSpeed;
 
 		//--Acceleration tries to get to the speed and velocity
-		result.linear = targetVelocity - character_.velocity;
-		result.linear /= timeToTarget_;
+		result.linear_ = targetVelocity - character_.velocity_;
+		result.linear_ /= timeToTarget_;
 
 		//--Check if acceleration is too fast
-		if (result.linear.length() > maxAcceleration_)
+		if (result.linear_.length() > maxAcceleration_)
 		{
-			result.linear.normalise();
-			result.linear *= maxAcceleration_;
+			result.linear_.normalise();
+			result.linear_ *= maxAcceleration_;
 		}
-		result.angular = 0;
+		result.angular_ = 0;
 		return result;
 	}
 };
@@ -165,49 +165,48 @@ public:
 	float timeToTarget_ = 0.1f;		// the time over which to achieve target speed
 
 	SteeringOutput GetSteering() {
-		SteeringOutput result{};
+		SteeringOutput result{ {0,0,0},0 };
 
 		//--Get the direction to the target
-		float rotation = target_.orientation - character_.orientation;
+		float rotation = target_.orientation_ - character_.orientation_;
 
 		//--Map the result to the (-360,360) interval
-		rotation = MapToRange(rotation);
+		//rotation = MapToRange(rotation);
+		rotation = std::abs(rotation) > PI ? rotation - 2 * PI : rotation;
 		float rotationSize = abs(rotation);
 
 		//--Check if we are there, return no steering
 		if (rotationSize < targetRadius_) {
-			result.angular -= result.angular;
+			//result.angular = -result.angular;
 			return result;
 		}
 
 		//--If we are outside the slow radius, then use max rotation
-		float targetRotation_{1};
+		float targetRotation{0};
 		if (rotation >= slowRadius_) {
-			rotation = maxRotation_;
-			std::cout << "Outside Slow Radius" << std::endl;
+			targetRotation = maxRotation_;
 		}
 		//--Otherwise calculate scaled rotation
 		else {
-			targetRotation_ = maxRotation_ * rotationSize / slowRadius_;
-			std::cout << "Inside Slow Radius" << std::endl;
-
+			targetRotation = maxRotation_ * rotationSize / slowRadius_;
 		}
 
 		//--The final target rotation combines speed(already in the variable) and direction
-		targetRotation_ *= rotation / rotationSize;
+		targetRotation *= rotation / rotationSize;
 
 		//--Acceleration tries to get to the target rotation
-		result.angular = targetRotation_ - character_.rotation;
-		result.angular /= timeToTarget_;
+		result.angular_ = targetRotation - character_.rotation_;
+		result.angular_ /= timeToTarget_;
 
 		//--Check if acceleration is too great
-		float angularAcceleration = abs(result.angular);
+		float angularAcceleration = abs(result.angular_);
+		
 		if (angularAcceleration > maxAngularAcceleration_)
 		{
-			result.angular /= angularAcceleration;		// maes it 1
-			result.angular *= maxAngularAcceleration_;
+			result.angular_ /= angularAcceleration;		// makes it 1
+			result.angular_ *= maxAngularAcceleration_;
 		}
-		result.linear = 0;
+		result.linear_ = 0;
 		return result;
 	}
 
@@ -247,7 +246,9 @@ int main(int argc, char* argv[])
 	Arrive arriveShip{ *enemy, *ship, 70, 100, 10, 100 };
 
 	//				maxAngularAcceleration, maxRotation, targetRadius, slowRadius
-	Align alignEnemy{ *ship, *enemy, 40.0f, 80.0f, 20.0f, 90.0f };
+	Align alignEnemy{ *ship, *enemy, 80.0f, 80.0f, 1.0f, 90.0f };
+	//Align alignEnemy{ *ship, *enemy, 10.0f, 1.0f, 0.01f, 0.1f };
+
 
 	while (!window.ShouldClose()) // Detect window close button or ESC key
 	{
@@ -259,8 +260,8 @@ int main(int argc, char* argv[])
 		{
 			const auto mpos = GetMousePosition();
 			Vector mposV3{ mpos.x, 0, mpos.y };
-			enemy->position = mposV3;
-			enemy->orientation = rand() % 360;
+			enemy->position_ = mposV3;
+			enemy->orientation_ = rand() % 360;
 		}
 
 		enemy->Draw();
@@ -269,8 +270,8 @@ int main(int argc, char* argv[])
 
 		EndDrawing();
 
-		ship->Update(arriveEnemy.GetSteering(), 200.0f, GetFrameTime());
-		//ship->Update(alignEnemy.GetSteering(), 00.0f, GetFrameTime());
+		//ship->Update(arriveEnemy.GetSteering(), 200.0f, GetFrameTime());
+		ship->Update(alignEnemy.GetSteering(), 100.0f, GetFrameTime());
 
 		
 		//enemy->Update(arriveShip.GetSteering(), 100.0f, GetFrameTime());
