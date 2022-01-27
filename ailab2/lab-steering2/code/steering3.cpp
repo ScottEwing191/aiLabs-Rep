@@ -157,11 +157,11 @@ public:
 	Kinematic& character_;
 	Kinematic& target_;
 
-	float maxAngularAcceleration_ = 1.0f;
-	float maxRotation_ = 3.0f;
+	float maxAngularAcceleration_ = 80.0f;
+	float maxRotation_ = 80.0f;
 
-	float targetRadius_;				// the radius for arriving at the target
-	float slowRadius_;				// the radius for beginning to slow down
+	float targetRadius_ = 1.0f;				// the radius for arriving at the target
+	float slowRadius_ = 90.0f;				// the radius for beginning to slow down
 	float timeToTarget_ = 0.1f;		// the time over which to achieve target speed
 
 	SteeringOutput GetSteering() {
