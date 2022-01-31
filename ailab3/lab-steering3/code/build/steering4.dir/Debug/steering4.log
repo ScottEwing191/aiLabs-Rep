@@ -1,15 +1,16 @@
-﻿  steering4.cpp
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\raylib-extras\draw-triangle-pro.hpp(63,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\raylib-extras\draw-triangle-pro.hpp(63,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\raylib-cpp-4.0.0\include\./Functions.hpp(66,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\raylib-cpp-4.0.0\include\./Functions.hpp(147,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\raylib-cpp-4.0.0\include\./Functions.hpp(166,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+﻿  Building Custom Rule C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/CMakeLists.txt
+  steering4.cpp
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\raylib-extras\draw-triangle-pro.hpp(63,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\raylib-extras\draw-triangle-pro.hpp(63,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\raylib-cpp-4.0.0\include\./Functions.hpp(66,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\raylib-cpp-4.0.0\include\./Functions.hpp(147,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\raylib-cpp-4.0.0\include\./Functions.hpp(166,3): warning C5051: attribute 'maybe_unused' requires at least '/std:c++17'; ignored
   The contents of <variant> are available only with C++17 or later.
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(98,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(102,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(104,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(108,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(112,34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(113,34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(245,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  steering4.vcxproj -> D:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\Debug\steering4.exe
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(98,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(102,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(104,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(108,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(112,34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(113,34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\steering4.cpp(245,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  steering4.vcxproj -> C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\Debug\steering4.exe

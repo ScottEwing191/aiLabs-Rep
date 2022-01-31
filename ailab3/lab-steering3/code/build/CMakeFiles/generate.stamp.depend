@@ -90,10 +90,10 @@ C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows-MSVC.cmake
 C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows.cmake
 C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
 C:/Program Files/CMake/share/cmake-3.22/Modules/SelectLibraryConfigurations.cmake
-D:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/CMakeLists.txt
-D:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CMakeCCompiler.cmake
-D:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake
-D:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CMakeRCCompiler.cmake
-D:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CMakeSystem.cmake
-D:/UniCourse/AI_Programming/aiLabs-Rep/vcpkg-export-20220111-084639/installed/x64-windows/share/raylib/vcpkg-cmake-wrapper.cmake
-D:/UniCourse/AI_Programming/aiLabs-Rep/vcpkg-export-20220111-084639/scripts/buildsystems/vcpkg.cmake
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/CMakeLists.txt
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CMakeCCompiler.cmake
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CMakeRCCompiler.cmake
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CMakeSystem.cmake
+C:/UniCourse/AI_Programming/aiLabs-Rep/vcpkg-export-20220111-084639/installed/x64-windows/share/raylib/vcpkg-cmake-wrapper.cmake
+C:/UniCourse/AI_Programming/aiLabs-Rep/vcpkg-export-20220111-084639/scripts/buildsystems/vcpkg.cmake
