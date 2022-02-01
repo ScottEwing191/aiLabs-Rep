@@ -1,4 +1,4 @@
-# Install script for directory: C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code
+# Install script for directory: E:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

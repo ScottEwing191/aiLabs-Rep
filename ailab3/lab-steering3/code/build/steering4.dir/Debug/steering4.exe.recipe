@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\Debug\steering4.exe</FullPath>
+      <FullPath>E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\Debug\steering4.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

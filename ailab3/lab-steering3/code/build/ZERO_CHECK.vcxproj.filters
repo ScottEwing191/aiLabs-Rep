@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\e31f8618ccb55fa5679ea5a87f41a7b4\generate.stamp.rule">
+    <CustomBuild Include="E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\c3d9acd5b62562dfe389dcf021aa47a5\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{86B761AA-DF3F-3B9A-9760-D86FA8B8544B}</UniqueIdentifier>
+      <UniqueIdentifier>{E12C5BAA-B2AA-36FB-A608-F2A17CEEF8F9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

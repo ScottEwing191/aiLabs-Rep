@@ -9,8 +9,8 @@ The output was:
 Microsoft (R) Build Engine version 16.8.2+25e4d540b for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 31/01/2022 21:27:36.
-Project "C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+Build started 31/01/2022 23:13:21.
+Project "E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdC.tlog\".
@@ -21,7 +21,7 @@ ClCompile:
   CMakeCCompilerId.c
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.exe
+  CompilerIdC.vcxproj -> E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
@@ -29,20 +29,20 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Done Building Project "C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+Done Building Project "E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.66
+Time Elapsed 00:00:03.31
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "E:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
@@ -54,8 +54,8 @@ The output was:
 Microsoft (R) Build Engine version 16.8.2+25e4d540b for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 31/01/2022 21:27:39.
-Project "C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+Build started 31/01/2022 23:13:26.
+Project "E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdCXX.tlog\".
@@ -66,7 +66,7 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.exe
+  CompilerIdCXX.vcxproj -> E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -74,46 +74,46 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Done Building Project "C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+Done Building Project "E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.79
+Time Elapsed 00:00:02.18
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "E:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/3.22.1/CompilerIdCXX/CompilerIdCXX.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/CMakeTmp
+Change Dir: E:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_f4048.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.8.2+25e4d540b for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_1e82f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.8.2+25e4d540b for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.28.29335 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   CMakeCCompilerABI.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f4048.dir\Debug\\" /Fd"cmTC_f4048.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCCompilerABI.c"
-  cmTC_f4048.vcxproj -> C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\CMakeTmp\Debug\cmTC_f4048.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1e82f.dir\Debug\\" /Fd"cmTC_1e82f.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCCompilerABI.c"
+  cmTC_1e82f.vcxproj -> E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\CMakeTmp\Debug\cmTC_1e82f.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/CMakeTmp
+Change Dir: E:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_d2674.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.8.2+25e4d540b for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_4f770.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.8.2+25e4d540b for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.28.29335 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d2674.dir\Debug\\" /Fd"cmTC_d2674.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_d2674.vcxproj -> C:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\CMakeTmp\Debug\cmTC_d2674.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4f770.dir\Debug\\" /Fd"cmTC_4f770.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_4f770.vcxproj -> E:\UniCourse\AI_Programming\aiLabs-Rep\ailab3\lab-steering3\code\build\CMakeFiles\CMakeTmp\Debug\cmTC_4f770.exe
 
 
 

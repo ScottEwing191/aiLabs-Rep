@@ -1,6 +1,6 @@
-^C:\UNICOURSE\AI_PROGRAMMING\AILABS-REP\AILAB3\LAB-STEERING3\CODE\BUILD\CMAKEFILES\E31F8618CCB55FA5679EA5A87F41A7B4\GENERATE.STAMP.RULE
+^E:\UNICOURSE\AI_PROGRAMMING\AILABS-REP\AILAB3\LAB-STEERING3\CODE\BUILD\CMAKEFILES\C3D9ACD5B62562DFE389DCF021AA47A5\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code -BC:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/lab-steering-week3.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code -BE:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/lab-steering-week3.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

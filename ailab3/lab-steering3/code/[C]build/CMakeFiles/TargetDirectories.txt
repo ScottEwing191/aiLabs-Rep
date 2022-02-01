@@ -1,0 +1,3 @@
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/steering4.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/ALL_BUILD.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab3/lab-steering3/code/build/CMakeFiles/ZERO_CHECK.dir
