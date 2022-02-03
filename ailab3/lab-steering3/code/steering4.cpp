@@ -85,10 +85,16 @@ public:
 		const float w = 10, len = 30; // ship width and length
 		const ai::Vector2 l{ 0, -w }, r{ 0, w }, nose{ len, 0 };
 
-		wrapPositions(k_.position_, screenwidth, screenheight);
+		//wrapPositions(k_.position_, screenwidth, screenheight);
 
 		ai::Vector2 pos{ k_.position_.z, k_.position_.x };
 		float ori = -k_.orientation_ * RAD2DEG; // negate: anticlockwise rot
+		
+												// wrap
+		pos.x = std::fmod(pos.x, static_cast<float>(screenwidth));
+		pos.y = std::fmod(pos.y, static_cast<float>(screenheight));
+		pos.x = pos.x < 0 ? pos.x + screenwidth : pos.x;
+		pos.y = pos.y < 0 ? pos.y + screenheight : pos.y;
 
 		ai::DrawTrianglePro(pos, l, r, nose, ori, col_);
 	}
@@ -252,15 +258,14 @@ public:
 
 class Face : public Align {
 public:
-	Kinematic& target;
 
-	Face(Kinematic& c, Kinematic& t) :Align{ c, t }, target{ t } {
+	Face(Kinematic& c, Kinematic& t) :Align{ c, t } {
 	}
 
 	SteeringOutput getSteering() override {
 		//--Calculate the target to delegate to align
 		//--Work out the direction to target
-		Vector direction = target.position_ - character_.position_;
+		Vector direction = Align::target_.position_ - character_.position_;
 
 		//--Check for zero direection, and make no change if so.
 		if (direction.length() == 0)
@@ -269,7 +274,6 @@ public:
 			return steer;
 		}
 		//--2. Delegate to align
-		Align::target_ = target;
 		Align::target_.orientation_ = atan2(-direction.x, direction.z);
 		return Align::getSteering();
 	}
@@ -299,11 +303,11 @@ public:
 
 		//--Calculate the center of the wander circle
 		Vector characterOrientationAsVector = asVector(character_.orientation_);
-		target.position_ = character_.position_ + wanderOffset_ * characterOrientationAsVector;
+		Face::target_.position_ = character_.position_ + wanderOffset_ * characterOrientationAsVector;
 
 		//--Calculate the target location
 		Vector targetOrientationAsVector = asVector(targetOrientation);
-		target.position_ += targetOrientationAsVector * wanderRadius_;
+		Face::target_.position_ += targetOrientationAsVector * wanderRadius_;
 
 		//--2. Delegate to Face.
 		SteeringOutput result = Face::getSteering();
@@ -349,10 +353,11 @@ public:
 	};
 
 	//--The overall Maximum acceleration and rotation
+	BehaviorAndWeight behaviours_[2];
 	float maxAcceleration_{};
 	float maxRotation_{};
 
-	BehaviorAndWeight behaviours_[2];
+
 
 	
 	SteeringOutput getSteering() {
@@ -399,16 +404,17 @@ int main(int argc, char* argv[])
 	const float drag_factor{ 0.5 };
 
 	Seek seek{ hunter.k_, prey.k_, 1000 };
-	Align align{ hunter.k_, prey.k_ };
-	//Face face{ hunter.k_, prey.k_ };
+
+	//Align align{ hunter.k_, prey.k_ };
+	Face face{ hunter.k_, prey.k_ };
 
 
-	BlendedSteering blend{ 1000, max_ang_accel};
-	blend.behaviours_[0].behaviour_ = &seek;
-	blend.behaviours_[0].weight_ = 1.0f;
+	BlendedSteering blend{ {{&seek,1.0f},{&face,1.0f}}, 1000, max_ang_accel };
+	//blend.behaviours_[0].behaviour_ = &seek;
+	//blend.behaviours_[0].weight_ = 1.0f;
 
-	blend.behaviours_[1].behaviour_ = &align;
-	blend.behaviours_[1].weight_ = 1.0f;
+	//blend.behaviours_[1].behaviour_ = &face;
+	//blend.behaviours_[1].weight_ = 1.0f;
 
 	//Kinematic wanderTarget{ {0,0,0} ,0, {0,0,0},0 };
 	TargetShip wanderTarget{ w / 2.0f + 250, h / 2.0f + 220, 0, GREEN };

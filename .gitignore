@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+pathfinding-lab/astar-cities/build/.vs/astar-cities/v16/Browse.VC.db
+pathfinding-lab/astar-cities/build/.vs/astar-cities/v16/ipch/AutoPCH/f893fc8c2f56cb05/ASTAR-CITIES.ipch

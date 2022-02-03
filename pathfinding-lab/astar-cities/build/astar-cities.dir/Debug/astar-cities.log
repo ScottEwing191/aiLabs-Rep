@@ -1,0 +1,21 @@
+﻿  astar-cities.cpp
+C:\UniCourse\AI_Programming\aiLabs-Rep\pathfinding-lab\astar-cities\astar-cities.cpp(164,3): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\UniCourse\AI_Programming\aiLabs-Rep\pathfinding-lab\astar-cities\astar-cities.cpp(197,26): warning C4244: 'argument': conversion from 'time_t' to 'const UIntType', possible loss of data
+          with
+          [
+              UIntType=uint32_t
+          ]
+C:\UniCourse\AI_Programming\aiLabs-Rep\pathfinding-lab\astar-cities\astar-cities.cpp(215,28): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\UniCourse\AI_Programming\aiLabs-Rep\pathfinding-lab\astar-cities\astar-cities.cpp(232,22): warning C4101: 'fg': unreferenced local variable
+E:\UniCourse\AI_Programming\aiLabs-Rep\vcpkg-export-20220111-084639\installed\x64-windows\include\boost/graph/random.hpp(44,1): warning C4267: 'argument': conversion from 'size_t' to 'IntType', possible loss of data
+          with
+          [
+              IntType=int
+          ]
+C:\UniCourse\AI_Programming\aiLabs-Rep\pathfinding-lab\astar-cities\astar-cities.cpp(198): message : see reference to function template instantiation 'unsigned __int64 boost::random_vertex<mygraph_t,boost::random::mt19937>(Graph &,RandomNumGen &)' being compiled
+          with
+          [
+              Graph=mygraph_t,
+              RandomNumGen=boost::random::mt19937
+          ]
+  astar-cities.vcxproj -> C:\UniCourse\AI_Programming\aiLabs-Rep\pathfinding-lab\astar-cities\build\Debug\astar-cities.exe

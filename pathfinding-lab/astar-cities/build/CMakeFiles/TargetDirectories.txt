@@ -1,0 +1,3 @@
+C:/UniCourse/AI_Programming/aiLabs-Rep/pathfinding-lab/astar-cities/build/CMakeFiles/astar-cities.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/pathfinding-lab/astar-cities/build/CMakeFiles/ALL_BUILD.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/pathfinding-lab/astar-cities/build/CMakeFiles/ZERO_CHECK.dir

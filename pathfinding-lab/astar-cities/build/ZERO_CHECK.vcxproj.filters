@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\UniCourse\AI_Programming\aiLabs-Rep\pathfinding-lab\astar-cities\build\CMakeFiles\e645d97d7718639a33cb6464f1989ea2\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{37C19ECC-6500-3703-B6CE-478A4AECED1A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\UniCourse\AI_Programming\aiLabs-Rep\pathfinding-lab\redblob_code\build\CMakeFiles\090ffeca1af8cb620395d93a0000d3b5\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{88B8491C-55B4-37E2-B9E3-4822E68289BC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

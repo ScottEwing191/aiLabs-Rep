@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\UniCourse\AI_Programming\aiLabs-Rep\pathfinding-lab\redblob_code\breadth_first.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\UniCourse\AI_Programming\aiLabs-Rep\pathfinding-lab\redblob_code\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{53A62A20-BA6B-395F-930A-11E3F9240357}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
