@@ -9,6 +9,7 @@
 #include <functional>
 
 using node_t = char;
+
 inline double heuristic(node_t, node_t);
 #include "redblob_code/implementation.hpp"
 
