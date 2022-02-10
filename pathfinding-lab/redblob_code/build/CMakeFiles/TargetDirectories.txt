@@ -1,7 +1,0 @@
-C:/UniCourse/AI_Programming/aiLabs-Rep/pathfinding-lab/redblob_code/build/CMakeFiles/1_breadth_first.dir
-C:/UniCourse/AI_Programming/aiLabs-Rep/pathfinding-lab/redblob_code/build/CMakeFiles/2_breadth_first_came_from.dir
-C:/UniCourse/AI_Programming/aiLabs-Rep/pathfinding-lab/redblob_code/build/CMakeFiles/3_breadth_first_early_exit.dir
-C:/UniCourse/AI_Programming/aiLabs-Rep/pathfinding-lab/redblob_code/build/CMakeFiles/4_dijkstra.dir
-C:/UniCourse/AI_Programming/aiLabs-Rep/pathfinding-lab/redblob_code/build/CMakeFiles/5_a_star.dir
-C:/UniCourse/AI_Programming/aiLabs-Rep/pathfinding-lab/redblob_code/build/CMakeFiles/ALL_BUILD.dir
-C:/UniCourse/AI_Programming/aiLabs-Rep/pathfinding-lab/redblob_code/build/CMakeFiles/ZERO_CHECK.dir

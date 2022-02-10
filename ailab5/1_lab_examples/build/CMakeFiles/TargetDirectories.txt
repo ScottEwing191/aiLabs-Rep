@@ -1,0 +1,9 @@
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab5/1_lab_examples/build/CMakeFiles/lab1.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab5/1_lab_examples/build/CMakeFiles/lab2.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab5/1_lab_examples/build/CMakeFiles/lab3.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab5/1_lab_examples/build/CMakeFiles/lab4.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab5/1_lab_examples/build/CMakeFiles/lab5.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab5/1_lab_examples/build/CMakeFiles/lab6.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab5/1_lab_examples/build/CMakeFiles/lab7.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab5/1_lab_examples/build/CMakeFiles/ALL_BUILD.dir
+C:/UniCourse/AI_Programming/aiLabs-Rep/ailab5/1_lab_examples/build/CMakeFiles/ZERO_CHECK.dir

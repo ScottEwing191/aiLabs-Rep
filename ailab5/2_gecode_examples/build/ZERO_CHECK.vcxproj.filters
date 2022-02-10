@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\UniCourse\AI_Programming\aiLabs-Rep\ailab5\2_gecode_examples\build\CMakeFiles\1b970539f68cc9ef545df6a7acb0bd06\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{92B9CD5C-D9D6-3531-8487-A6808068EF7A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
